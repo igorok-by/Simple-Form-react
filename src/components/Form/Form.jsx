@@ -1,7 +1,8 @@
 import React from 'react'
 import Input from '../Input'
 import Select from '../Select'
-// import classNames from 'classnames'
+import Checkbox from '../Checkbox'
+
 import './Form.scss'
 
 const Form = () => {
@@ -19,6 +20,8 @@ const Form = () => {
       <Input name="Номер телефона" />
 
       <Select />
+
+      <Checkbox />
     </form>
   )
 }
