@@ -1,0 +1,61 @@
+@import "../../styles/variables";
+
+.input-wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  &--error {
+    .input__message {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.input {
+  width: 100%;
+  margin-top: 0.7rem;
+  margin-bottom: 3.4rem;
+  padding: 1.5rem 1.6rem;
+
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+
+  border: $input-border;
+  border-radius: $def-radius;
+  box-shadow: 0 4px 8px rgba(44, 39, 56, 0.04);
+
+  transition: $def-transition;
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
+
+  &:active,
+  &:focus {
+    border: $input-border-active;
+  }
+}
+
+.input__label {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: $label-color;
+}
+
+.input__message {
+  position: absolute;
+  bottom: 0.8rem;
+
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: $warning-color;
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition: $def-transition;
+}

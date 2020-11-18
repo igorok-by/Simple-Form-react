@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+
+.form {
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 4rem 3rem;
+
+  background-color: $default-color;
+  border-radius: $big-radius;
+}
+
+.form__header {
+  margin-bottom: 8.2rem;
+}
+
+.form__title {
+  margin-bottom: 0.8rem;
+
+  font-weight: bold;
+  font-size: 3.4rem;
+  line-height: 4.4rem;
+}
+
+.form__subtitle {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+
+  a {
+    color: $primary-color;
+  }
+}

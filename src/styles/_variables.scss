@@ -4,6 +4,10 @@ $default-color: #ffffff;
 $primary-color: #0880ae;
 $secondary-color: #46d6a0;
 $success-color: #f9f871;
+$warning-color: #ff7171;
+$label-color: #756f86;
+$border-color: #dbe2ea;
+$placeholder-color: #7c9cbf;
 
 // Font
 $mainFont: "IBMPlexSans", Helvetica, Arial, sans-serif;
@@ -17,6 +21,8 @@ $mainLineHeight: 1;
 // Borders
 $def-radius: 6px;
 $big-radius: 24px;
+$input-border: 1px solid $border-color;
+$input-border-active: 2px solid $primary-color;
 
 // Transition
 $def-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);

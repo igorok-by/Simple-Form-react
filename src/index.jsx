@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom'
 
 import './styles/main.scss'
 
-import App from './components/App'
+import Form from './components/Form'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<Form />, document.getElementById('root'))
