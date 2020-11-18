@@ -8,6 +8,7 @@ $warning-color: #ff7171;
 $label-color: #756f86;
 $border-color: #dbe2ea;
 $placeholder-color: #7c9cbf;
+$hover-menu-color: #ebf4f8;
 
 // Font
 $mainFont: "IBMPlexSans", Helvetica, Arial, sans-serif;
@@ -23,6 +24,11 @@ $def-radius: 6px;
 $big-radius: 24px;
 $input-border: 1px solid $border-color;
 $input-border-active: 2px solid $primary-color;
+
+//Box-shadows
+$input-shadow-default: 0 4px 8px rgba(44, 39, 56, 0.04);
+$input-shadow-active: 0 4px 8px rgba(44, 39, 56, 0.04), 0 0 0 1px $primary-color;
+$menu-shadow: $input-shadow-default, 0 20px 20px rgba(44, 39, 56, 0.04);
 
 // Transition
 $def-transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);

@@ -25,7 +25,7 @@
 
   border: $input-border;
   border-radius: $def-radius;
-  box-shadow: 0 4px 8px rgba(44, 39, 56, 0.04);
+  box-shadow: $input-shadow-default;
 
   transition: $def-transition;
 
@@ -35,7 +35,8 @@
 
   &:active,
   &:focus {
-    border: $input-border-active;
+    border-color: $primary-color;
+    box-shadow: $input-shadow-active;
   }
 }
 

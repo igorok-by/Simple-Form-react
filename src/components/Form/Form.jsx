@@ -1,5 +1,6 @@
 import React from 'react'
 import Input from '../Input'
+import Select from '../Select'
 // import classNames from 'classnames'
 import './Form.scss'
 
@@ -16,6 +17,8 @@ const Form = () => {
       <Input name="Имя" />
       <Input name="Email" />
       <Input name="Номер телефона" />
+
+      <Select />
     </form>
   )
 }
