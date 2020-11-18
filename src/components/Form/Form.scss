@@ -3,7 +3,7 @@
 .form {
   width: 100%;
   max-width: 46rem;
-  margin: 0 auto;
+  margin: 3rem auto;
   padding: 4rem 3rem;
 
   background-color: $default-color;
@@ -28,5 +28,40 @@
 
   a {
     color: $primary-color;
+  }
+}
+
+.form__submit {
+  width: 100%;
+  padding: 1.4rem;
+
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2.1rem;
+  color: $light-color;
+
+  background-color: $primary-color;
+  border: 2px solid $primary-color;
+  border-radius: $def-radius;
+  box-shadow: $button-shadow-default;
+  cursor: pointer;
+
+  transition: $def-transition;
+
+  &:active,
+  &:active:hover {
+    border-color: rgba($color: $dark-color, $alpha: 0.86);
+    box-shadow: $button-shadow-active;
+  }
+
+  &:hover {
+    box-shadow: $button-shadow-hover;
+  }
+
+  &:disabled {
+    color: rgba($color: $dark-color, $alpha: 0.24);
+
+    background-color: $border-color;
+    box-shadow: $input-shadow-default;
   }
 }

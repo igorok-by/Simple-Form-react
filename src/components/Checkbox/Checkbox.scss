@@ -34,7 +34,8 @@
 
   &:hover + label::before,
   &:checked + label::before {
-    border: $input-border-active;
+    border-width: 2px;
+    border-color: $primary-color;
     box-shadow: $input-shadow-active;
   }
 

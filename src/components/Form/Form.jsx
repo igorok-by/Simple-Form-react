@@ -22,6 +22,10 @@ const Form = () => {
       <Select />
 
       <Checkbox />
+
+      <button className="form__submit" type="submit">
+        Зарегистрироваться
+      </button>
     </form>
   )
 }
