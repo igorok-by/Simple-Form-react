@@ -5,3 +5,5 @@ export const LABELS = {
 }
 
 export const LANGS = ['Русский', 'Английский', 'Китайский', 'Испанский']
+
+export const INITIAL_STATE = {}

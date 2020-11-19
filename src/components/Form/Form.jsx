@@ -6,8 +6,12 @@ import Checkbox from '../Checkbox'
 import './Form.scss'
 
 const Form = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault()
+  }
+
   return (
-    <form className="form" onSubmit={(e) => e.preventDefault()}>
+    <form className="form" onSubmit={(event) => handleSubmit(event)}>
       <header className="form__header">
         <h2 className="form__title">Регистрация</h2>
         <p className="form__subtitle">

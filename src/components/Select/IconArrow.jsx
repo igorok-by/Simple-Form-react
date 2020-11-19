@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const IconArrow = () => (
   <div className="dropdown__icon-arrow">
@@ -8,4 +8,4 @@ const IconArrow = () => (
   </div>
 )
 
-export default IconArrow
+export default memo(IconArrow)
