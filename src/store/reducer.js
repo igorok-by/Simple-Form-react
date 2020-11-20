@@ -1,37 +1,25 @@
-import {
-  CLEAN_FILMS_DATA,
-  FETCH_FILMS_REQUEST,
-  FETCH_FILMS_SUCCESS,
-} from './actionTypes'
+import { SET_VALIDATION_TRUE, SET_VALIDATION_FALSE } from './actionTypes'
+import { LABELS, INPUT_STATE_KEYS } from '../data'
 
-import { INITIAL_STATE } from '../data/constants'
+const { NAME, EMAIL, PHONE, LANG, CONDITIONS } = LABELS
 
-const reducer = (state = INITIAL_STATE, action) => {
+const initialState = {
+  [INPUT_STATE_KEYS[NAME]]: false,
+  [INPUT_STATE_KEYS[EMAIL]]: false,
+  [INPUT_STATE_KEYS[PHONE]]: false,
+  [INPUT_STATE_KEYS[LANG]]: false,
+  [INPUT_STATE_KEYS[CONDITIONS]]: false,
+}
+
+const reducer = (state = initialState, action = {}) => {
+  const { title } = action
+
   switch (action.type) {
-    case CLEAN_FILMS_DATA:
-      return {
-        ...state,
-        films: [],
-      }
+    case SET_VALIDATION_TRUE:
+      return title ? { ...state, [INPUT_STATE_KEYS[title]]: true } : state
 
-    case FETCH_FILMS_REQUEST:
-      return {
-        ...state,
-        loading: true,
-        error: null,
-      }
-
-    case FETCH_FILMS_SUCCESS:
-      const { isValidSearchValue, items, totalResults } = action.payload
-
-      return {
-        ...state,
-        isValidSearchValue: isValidSearchValue,
-        films: [...state.films, ...items],
-        totalResults: totalResults,
-        loading: false,
-        error: null,
-      }
+    case SET_VALIDATION_FALSE:
+      return title ? { ...state, [INPUT_STATE_KEYS[title]]: false } : state
 
     default:
       return state

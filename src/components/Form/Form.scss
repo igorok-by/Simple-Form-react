@@ -62,6 +62,8 @@
     color: rgba($color: $dark-color, $alpha: 0.24);
 
     background-color: $border-color;
+    border-color: $border-color;
     box-shadow: $input-shadow-default;
+    cursor: auto;
   }
 }

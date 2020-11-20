@@ -5,9 +5,9 @@ import IconArrow from './IconArrow'
 import 'react-dropdown/style.css'
 import './Select.scss'
 
-import { LANGS } from '../../data'
+import { LANGS, LABELS } from '../../data'
 
-const name = 'Язык'
+const name = LABELS.LANG
 const options = LANGS.map((lang) => ({
   value: lang,
   label: lang,

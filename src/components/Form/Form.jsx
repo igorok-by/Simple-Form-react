@@ -5,13 +5,17 @@ import Checkbox from '../Checkbox'
 
 import './Form.scss'
 
+import { LABELS } from '../../data'
+
+const { NAME, EMAIL, PHONE } = LABELS
+
 const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
   }
 
   return (
-    <form className="form" onSubmit={(event) => handleSubmit(event)}>
+    <form className="form" onSubmit={handleSubmit}>
       <header className="form__header">
         <h2 className="form__title">Регистрация</h2>
         <p className="form__subtitle">
@@ -19,15 +23,15 @@ const Form = () => {
         </p>
       </header>
 
-      <Input name="Имя" />
-      <Input name="Email" />
-      <Input name="Номер телефона" />
+      <Input title={NAME} />
+      <Input title={EMAIL} />
+      <Input title={PHONE} />
 
       <Select />
 
       <Checkbox />
 
-      <button className="form__submit" type="submit">
+      <button className="form__submit" type="submit" disabled={false}>
         Зарегистрироваться
       </button>
     </form>
