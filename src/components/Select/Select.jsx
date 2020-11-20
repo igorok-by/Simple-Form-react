@@ -1,13 +1,15 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import Dropdown from 'react-dropdown'
 import IconArrow from './IconArrow'
 
 import 'react-dropdown/style.css'
 import './Select.scss'
 
+import { setValidationTrue } from '../../store/actionCreators'
 import { LANGS, LABELS } from '../../data'
 
-const name = LABELS.LANG
+const title = LABELS.LANG
 const options = LANGS.map((lang) => ({
   value: lang,
   label: lang,
@@ -15,22 +17,29 @@ const options = LANGS.map((lang) => ({
 }))
 
 const Select = () => {
+  const dispatch = useDispatch()
+
+  const handleChange = () => {
+    dispatch(setValidationTrue(title))
+  }
+
   return (
     <div className="dropdown-wrapper">
-      <p className="dropdown__label">{name}</p>
+      <p className="dropdown__label">{title}</p>
 
       <Dropdown
         options={options}
-        placeholder={name}
+        placeholder={`Выберите ${title}`}
         className="dropdown"
         menuClassName="dropdown__menu"
         controlClassName="dropdown__control"
         placeholderClassName="dropdown__placeholder"
         arrowOpen={<IconArrow />}
         arrowClosed={<IconArrow />}
+        onChange={handleChange}
       />
 
-      <span className="dropdown__message">Выберите {name}</span>
+      <span className="dropdown__message">Выберите {title}</span>
     </div>
   )
 }

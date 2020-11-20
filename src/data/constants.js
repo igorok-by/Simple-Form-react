@@ -10,8 +10,8 @@ export const INPUT_STATE_KEYS = {
   [LABELS.NAME]: 'isValidatedName',
   [LABELS.EMAIL]: 'isValidatedEmail',
   [LABELS.PHONE]: 'isValidatedPhone',
-  [LABELS.LANG]: 'isConditionsChecked',
-  [LABELS.CONDITIONS]: 'isLanguageSelected',
+  [LABELS.LANG]: 'isLanguageSelected',
+  [LABELS.CONDITIONS]: 'isConditionsChecked',
 }
 
 export const PLACEHOLDERS = {

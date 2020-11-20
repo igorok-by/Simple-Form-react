@@ -1,4 +1,6 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+
 import Input from '../Input'
 import Select from '../Select'
 import Checkbox from '../Checkbox'
@@ -10,6 +12,9 @@ import { LABELS } from '../../data'
 const { NAME, EMAIL, PHONE } = LABELS
 
 const Form = () => {
+  const STATE = useSelector((state) => state)
+  console.log(STATE)
+
   const handleSubmit = (event) => {
     event.preventDefault()
   }

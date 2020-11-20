@@ -7,8 +7,10 @@
   opacity: 0;
 
   & + .checkbox__label {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+
+    cursor: pointer;
 
     user-select: none;
   }
