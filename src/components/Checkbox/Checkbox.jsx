@@ -32,7 +32,9 @@ const Checkbox = () => {
         onChange={handleChange}
       />
       <label className="checkbox__label" htmlFor={title}>
-        Принимаю <a href=" ">условия</a> использования
+        <span>
+          Принимаю <a href=" ">условия</a> использования
+        </span>
       </label>
     </>
   )

@@ -16,26 +16,28 @@ const Form = () => {
   )
 
   return (
-    <form className="form">
-      <header className="form__header">
-        <h2 className="form__title">Регистрация</h2>
-        <p className="form__subtitle">
-          Уже есть аккаунт? <a href=" ">Войти</a>
-        </p>
-      </header>
+    <div className="form-wrapper">
+      <form className="form">
+        <header className="form__header">
+          <h2 className="form__title">Регистрация</h2>
+          <p className="form__subtitle">
+            Уже есть аккаунт? <a href=" ">Войти</a>
+          </p>
+        </header>
 
-      <Input title={NAME} />
-      <Input title={EMAIL} />
-      <Input title={PHONE} />
+        <Input title={NAME} />
+        <Input title={EMAIL} />
+        <Input title={PHONE} />
 
-      <Select />
+        <Select />
 
-      <Checkbox />
+        <Checkbox />
 
-      <button className="form__submit" type="submit" disabled={!isDisabled}>
-        Зарегистрироваться
-      </button>
-    </form>
+        <button className="form__submit" type="submit" disabled={!isDisabled}>
+          Зарегистрироваться
+        </button>
+      </form>
+    </div>
   )
 }
 

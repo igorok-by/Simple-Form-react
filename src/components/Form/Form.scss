@@ -1,9 +1,14 @@
 @import "../../styles/variables";
 
+.form-wrapper {
+  width: 100%;
+  padding: 3rem 1.5rem;
+}
+
 .form {
   width: 100%;
   max-width: 46rem;
-  margin: 3rem auto;
+  margin: 0 auto;
   padding: 4rem 3rem;
 
   background-color: $default-color;
@@ -12,6 +17,12 @@
 
 .form__header {
   margin-bottom: 5.4rem;
+}
+
+@media screen and (max-width: $screen-sm-tablet) {
+  .form__header {
+    text-align: center;
+  }
 }
 
 .form__title {

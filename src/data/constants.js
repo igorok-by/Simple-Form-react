@@ -17,7 +17,7 @@ export const INPUT_STATE_KEYS = {
 export const PLACEHOLDERS = {
   [LABELS.NAME]: 'Введите ваше имя',
   [LABELS.EMAIL]: 'Введите ваш email',
-  [LABELS.PHONE]: 'Введите номер вашего телефона',
+  [LABELS.PHONE]: 'Введите номер телефона',
 }
 
 export const REGEXPS = {
