@@ -22,4 +22,10 @@ export const PLACEHOLDERS = {
 
 export const LANGS = ['Русский', 'Английский', 'Китайский', 'Испанский']
 
-export const INITIAL_STATE = {}
+export const REGEXPS = {
+  [LABELS.NAME]: /^[a-zA-Zа-яА-Я\s-]*$/,
+
+  [LABELS.EMAIL]: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+
+  [LABELS.PHONE]: /^[\d+()-]*$/,
+}

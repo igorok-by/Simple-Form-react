@@ -1,19 +1,16 @@
-import { LABELS } from '../data'
-
-const { NAME, EMAIL, PHONE } = LABELS
+import { REGEXPS, LABELS } from '../data'
 
 export const validateInput = (title, value) => {
-  switch (title) {
-    case NAME:
-      if (value) return true
-      break
-    case EMAIL:
-      if (value) return true
-      break
-    case PHONE:
-      if (value) return true
-      break
-    default:
-      return
-  }
+  console.log(
+    'phone',
+    REGEXPS[title].test(value) &&
+      value.match(/\d/g) &&
+      value.match(/\d/g).length <= 11,
+    'other',
+    REGEXPS[title].test(value),
+  )
+
+  return title === LABELS.PHONE && value.match(/\d/g)
+    ? REGEXPS[title].test(value) && value.match(/\d/g).length <= 11
+    : REGEXPS[title].test(value)
 }

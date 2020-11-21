@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 import Input from '../Input'
 import Select from '../Select'
@@ -8,19 +8,26 @@ import Checkbox from '../Checkbox'
 import './Form.scss'
 
 import { LABELS } from '../../data'
-
 const { NAME, EMAIL, PHONE } = LABELS
 
 const Form = () => {
-  const STATE = useSelector((state) => state)
-  console.log(STATE)
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-  }
+  const isDisabled = useSelector(
+    ({
+      isValidatedName,
+      isValidatedEmail,
+      isValidatedPhone,
+      isLanguageSelected,
+      isConditionsChecked,
+    }) =>
+      isValidatedName &&
+      isValidatedEmail &&
+      isValidatedPhone &&
+      isLanguageSelected &&
+      isConditionsChecked,
+  )
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
+    <form className="form">
       <header className="form__header">
         <h2 className="form__title">Регистрация</h2>
         <p className="form__subtitle">
@@ -36,7 +43,7 @@ const Form = () => {
 
       <Checkbox />
 
-      <button className="form__submit" type="submit" disabled={false}>
+      <button className="form__submit" type="submit" disabled={!isDisabled}>
         Зарегистрироваться
       </button>
     </form>

@@ -25,10 +25,10 @@ const Checkbox = () => {
       <input
         className="checkbox"
         type="checkbox"
-        id="checkbox"
+        id={title}
         onChange={handleChange}
       />
-      <label className="checkbox__label" htmlFor="checkbox">
+      <label className="checkbox__label" htmlFor={title}>
         Принимаю <a href=" ">условия</a> использования
       </label>
     </>

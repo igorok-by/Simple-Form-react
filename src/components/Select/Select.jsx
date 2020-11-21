@@ -38,8 +38,6 @@ const Select = () => {
         arrowClosed={<IconArrow />}
         onChange={handleChange}
       />
-
-      <span className="dropdown__message">Выберите {title}</span>
     </div>
   )
 }
