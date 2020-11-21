@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 import Dropdown from 'react-dropdown'
 import IconArrow from './IconArrow'
@@ -19,9 +19,9 @@ const options = LANGS.map((lang) => ({
 const Select = () => {
   const dispatch = useDispatch()
 
-  const handleChange = () => {
+  const handleChange = useCallback(() => {
     dispatch(setValidationTrue(title))
-  }
+  }, [dispatch])
 
   return (
     <div className="dropdown-wrapper">

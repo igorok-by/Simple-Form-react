@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { memo, useCallback, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import classNames from 'classnames'
 
@@ -16,15 +16,19 @@ const Input = ({ title }) => {
   const isValidatedInput = useSelector(
     (state) => state[INPUT_STATE_KEYS[title]],
   )
+
   const [inputValue, setInputValue] = useState('')
 
-  const handleChange = ({ target: { value }, target }) => {
-    target && setInputValue(value)
+  const handleChange = useCallback(
+    ({ target: { value }, target }) => {
+      target && setInputValue(value)
 
-    value && validateInput(title, value)
-      ? dispatch(setValidationTrue(title))
-      : dispatch(setValidationFalse(title))
-  }
+      value && validateInput(title, value)
+        ? dispatch(setValidationTrue(title))
+        : dispatch(setValidationFalse(title))
+    },
+    [dispatch, title],
+  )
 
   const inputWrapperClasses = classNames('input-wrapper', {
     'input-wrapper--error': inputValue && !isValidatedInput,
@@ -48,4 +52,4 @@ const Input = ({ title }) => {
   )
 }
 
-export default Input
+export default memo(Input)

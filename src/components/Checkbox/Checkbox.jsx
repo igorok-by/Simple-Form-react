@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 
 import './Checkbox.scss'
@@ -14,11 +14,14 @@ const title = LABELS.CONDITIONS
 const Checkbox = () => {
   const dispatch = useDispatch()
 
-  const handleChange = ({ target: { checked } }) => {
-    checked
-      ? dispatch(setValidationTrue(title))
-      : dispatch(setValidationFalse(title))
-  }
+  const handleChange = useCallback(
+    ({ target: { checked } }) => {
+      checked
+        ? dispatch(setValidationTrue(title))
+        : dispatch(setValidationFalse(title))
+    },
+    [dispatch],
+  )
 
   return (
     <>

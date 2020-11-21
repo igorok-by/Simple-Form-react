@@ -20,8 +20,6 @@ export const PLACEHOLDERS = {
   [LABELS.PHONE]: 'Введите номер вашего телефона',
 }
 
-export const LANGS = ['Русский', 'Английский', 'Китайский', 'Испанский']
-
 export const REGEXPS = {
   [LABELS.NAME]: /^[a-zA-Zа-яА-Я\s-]*$/,
 
@@ -29,3 +27,5 @@ export const REGEXPS = {
 
   [LABELS.PHONE]: /^[\d+()-]*$/,
 }
+
+export const LANGS = ['Русский', 'Английский', 'Китайский', 'Испанский']

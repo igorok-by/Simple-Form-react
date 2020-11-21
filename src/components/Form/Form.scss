@@ -11,7 +11,7 @@
 }
 
 .form__header {
-  margin-bottom: 8.2rem;
+  margin-bottom: 5.4rem;
 }
 
 .form__title {
@@ -28,6 +28,10 @@
 
   a {
     color: $primary-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

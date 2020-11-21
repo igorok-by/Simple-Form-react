@@ -11,19 +11,8 @@ import { LABELS } from '../../data'
 const { NAME, EMAIL, PHONE } = LABELS
 
 const Form = () => {
-  const isDisabled = useSelector(
-    ({
-      isValidatedName,
-      isValidatedEmail,
-      isValidatedPhone,
-      isLanguageSelected,
-      isConditionsChecked,
-    }) =>
-      isValidatedName &&
-      isValidatedEmail &&
-      isValidatedPhone &&
-      isLanguageSelected &&
-      isConditionsChecked,
+  const isDisabled = useSelector((state) =>
+    Object.values(state).every((elem) => elem),
   )
 
   return (
